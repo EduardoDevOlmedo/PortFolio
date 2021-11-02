@@ -1,0 +1,128 @@
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+
+.absolute-pos {
+  font-family: 'PT Sans', sans-serif;
+  position: absolute;
+  color: black;
+  padding: 10px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  left: calc(50% - 150px);
+  bottom: calc(50%);
+  border-top-left-radius: 15px;
+  will-change: slide-in-top;
+  animation: slide-in-top 1800ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  font-size: 2rem;
+
+}
+
+.absolute-pos-arrow {
+  position: absolute;
+  width: 70px;
+  padding: 10px;
+  border-radius: 7px;
+  text-align: center;
+  left: calc(50% - 35px);
+  bottom: calc(50% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.absolute-pos-arrow a img {
+  width: 30px;
+  will-change: transform;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(
+    321deg) brightness(108%) contrast(109%);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+  animation: slide-in-top-arrow 2000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both 1s;
+}
+
+.absolute-pos-arrow a img:hover {
+  width: 40px;
+  transform: rotate(90deg);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+canvas {
+  height: 100vh !important;
+  width: 100% !important;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+
+
+
+/* ANIMATIONS */
+
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* arrow Animation */
+
+@-webkit-keyframes slide-in-top-arrow {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top-arrow {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+}

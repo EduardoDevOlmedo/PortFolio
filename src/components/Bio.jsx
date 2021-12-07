@@ -28,11 +28,13 @@ function Bio() {
         return () => clearInterval(interval);
      }, []);
 
-    
+
+     
+
 
 
   return(
-    <div data-aos="fade-up" id="biography">
+    <div data-aos="fade-up" id="biography" >
         <h3>Hi! I'm Eduardo Olmedo, a <b>Frontend Developer</b></h3>
         <p>I have worked with: <b className="data-eff">{data}</b></p>
         <p> I'm a super passionate, 18 year old Junior Frontend Developer who's willing to learn the most from others, and learning by myself. Since December, 2020 I'

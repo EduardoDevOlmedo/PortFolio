@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ParticleComponent from "./ParticleComponent";
-import Bio from "./components/Biography";
 import { Presentation } from "./components/Presentation";
+import { Bio } from "./components/Biography";
 import '../src/styles.css';
 
 function App() {

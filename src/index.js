@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ParticleComponent from "./ParticleComponent";
 import { Presentation } from "./components/Presentation";
-import { Bio } from "./Bio";
+import { Bio } from "./components/Bio";
 import '../src/styles.css';
 
 function App() {

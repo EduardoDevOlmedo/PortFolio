@@ -1,3 +1,6 @@
+$black-title: #303030;
+$secondary-b:  #B2B0B0;
+
 *
 {
   box-sizing: border-box;
@@ -15,10 +18,11 @@ body {
 }
 
 
+
 .absolute-pos {
   font-family: 'PT Sans', sans-serif;
   position: absolute;
-  color: black;
+  color: $black-title;
   padding: 10px;
   border-radius: 7px;
   background: rgb(255, 255, 255);
@@ -45,16 +49,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  a img {
+    width: 30px;
+    will-change: transform;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(
+      321deg) brightness(108%) contrast(109%);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    animation: slide-in-top-arrow 2000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both 1s;
+  }
 }
 
-.absolute-pos-arrow a img {
-  width: 30px;
-  will-change: transform;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(
-    321deg) brightness(108%) contrast(109%);
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
-  animation: slide-in-top-arrow 2000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both 1s;
-}
 
 .absolute-pos-arrow a img:hover {
   width: 40px;
@@ -65,7 +69,7 @@ body {
 canvas {
   height: 100vh !important;
   width: 100% !important;
-  background-color: rgb(0, 0, 0);
+  background-color: $black-title;
   position: relative;
 }
 
@@ -74,16 +78,21 @@ canvas {
   padding: 5% 10%;
   font-family: 'PT Sans', sans-serif;
   margin-bottom: 200px;
+  .description {
+    letter-spacing: 2.5px;
+  }
 }
 
 #biography h3, p:first-of-type {
   text-align: center;
   padding: 10px;
   font-weight: lighter;
+  color: $black-title;
 }
 
 #biography p:first-of-type {
   font-size: 2rem;
+  color: $black-title;
 }
 
 .nav-container {
@@ -98,12 +107,11 @@ canvas {
   background-color: none;
   position: fixed; 
   bottom: 10px;
-  width: fit-content;
+  width: clamp(160px, 50%, 220px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px; 
-  background-color: #000;
+  justify-content: space-evenly;
+  background-color: $black-title;
   padding: 10px;
   border-radius: 15px;
 }
@@ -122,8 +130,32 @@ canvas {
    transform: translateY(5%);
 }
 
+.title-container {
+  width: clamp(200px, 50%, 320px);
+  text-align: center;
+  margin: 35px auto;
+  letter-spacing: 2.8px;
+  border-bottom: 2px solid $secondary-b;
+  h2 {
+    padding: 5px;
+    font-size: 3rem;
+  }
+}
+
+
+.contains-data {
+  text-align: center;
+  font-size: 3rem;
+  margin: 25px;
+}
+
 /* ANIMATIONS */
 
+b,h2,h3, p {
+  color: $black-title;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  
+}
 
  
 

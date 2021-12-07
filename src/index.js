@@ -6,7 +6,7 @@ import { Presentation } from "./components/Presentation";
 import { Bio } from "./components/Bio";
 import { Navbar } from "./components/Nav";
 import { useState, useMemo, useEffect, useRef } from "react";
-import '../src/styles.css';
+import '../src/style.css';
 import Aos from "aos"
 import "aos/dist/aos.css"
 
@@ -20,7 +20,6 @@ function App() {
      const callbackIntersection = entries => {
          const [entry] = entries;
          if(entry.isIntersecting){
-          console.log("Intersects")
           setTimeout(() => {
             setVisibility(true)
           }, 250);
@@ -29,7 +28,6 @@ function App() {
           setTimeout(() => {
             setVisibility(false)
           }, 250);
-          console.log("Not intersecting")
         }
      }     
 

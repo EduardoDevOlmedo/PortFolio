@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ParticleComponent from "./ParticleComponent";
-import Bio from "../src/components/Biography.jsx";
+import Bio from "./components/Biography.jsx";
 import { Presentation } from "./components/Presentation";
 import '../src/styles.css';
 

@@ -9,7 +9,7 @@ function Presentation(props){
       <p>Frontend Developer</p>
     </div>
     <div className="absolute-pos-arrow">
-      <a href="#biography" title="View Projects"><img src={play}></img></a>
+      <a href="#biography" title="View Projects"><img alt="play-icon" src={play}></img></a>
     </div>
   </section>
   )

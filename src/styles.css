@@ -70,9 +70,32 @@ canvas {
 }
 
 
+#biography {
+  padding: 5% 10%;
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 200px;
+}
+
+#biography h3, p:first-of-type {
+  text-align: center;
+  padding: 10px;
+  font-weight: lighter;
+}
+
+.fade-in {
+  opacity: 0;
+  transition:  opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
 
 /* ANIMATIONS */
 
+
+ 
 
 @-webkit-keyframes slide-in-top {
   0% {
@@ -124,5 +147,14 @@ canvas {
             transform: translateY(0);
     opacity: 1;
     transform: rotate(90deg);
+  }
+}
+
+
+/* media Queries */
+
+@media screen and (min-width: 601px) {
+  html {
+    font-size: 80%;
   }
 }

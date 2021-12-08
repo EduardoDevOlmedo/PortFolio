@@ -75,7 +75,7 @@ canvas {
 
 
 #biography {
-  padding: 5% 10%;
+  padding: 3% 10%;
   font-family: 'PT Sans', sans-serif;
   margin-bottom: 200px;
   .description {
@@ -99,26 +99,30 @@ canvas {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  padding: 40px 20px;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: none;
-  position: fixed; 
-  bottom: 10px;
-  width: clamp(160px, 50%, 220px);
+  position: fixed;
+  bottom: 30px;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: $black-title;
-  padding: 10px;
+  background-color:inherit;
+  padding: 13px;
   border-radius: 15px;
+  flex-direction: column;
+  height: 200px;
+  border: 3px solid $secondary-b;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #fff;
+  color: $black-title;
+  display: block;
   font-family: 'PT Sans', sans-serif;
   font-size: 2.5rem;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
@@ -127,8 +131,10 @@ canvas {
 .navbar a:hover {
    opacity: 0.8;
    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
-   transform: translateY(5%);
+   transform: translateX(5%);
 }
+
+
 
 .title-container {
   width: clamp(200px, 50%, 320px);
@@ -143,10 +149,11 @@ canvas {
 }
 
 
-.contains-data {
-  text-align: center;
-  font-size: 3rem;
-  margin: 25px;
+.contains-data b {
+    font-size: 4rem;
+    margin: 25px;
+    display: grid;
+    place-content: center;
 }
 
 /* ANIMATIONS */

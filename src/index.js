@@ -27,7 +27,7 @@ function App() {
         else {
           setTimeout(() => {
             setVisibility(false)
-          }, 250);
+          }, 0);
         }
      }     
 

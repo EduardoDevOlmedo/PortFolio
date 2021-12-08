@@ -8,9 +8,9 @@ const Navbar = () => {
     return(
        <div className="nav-container">
         <div className="navbar">
-            <a href="#biography"><FontAwesomeIcon icon={faAtlas} /></a>
-            <a href="#projects"><FontAwesomeIcon icon={faTasks} /></a>
-            <a href="#contact"><FontAwesomeIcon icon={faIdBadge} /></a>
+            <a href="#biography" title="Bio"><FontAwesomeIcon icon={faAtlas} /></a>
+            <a href="#projects" title="Projects"><FontAwesomeIcon icon={faTasks} /></a>
+            <a href="#contact" title="Contact Me"><FontAwesomeIcon icon={faIdBadge} /></a>
         </div>
        </div>
     )

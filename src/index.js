@@ -53,7 +53,7 @@ function App() {
 
 
     useEffect(() => {
-      Aos.init({duration: 400})
+      Aos.init({duration: 300})
     }, [])
 
   return (
@@ -64,7 +64,7 @@ function App() {
       </div>
       <main ref={targetRef}>
         <Bio />
-        {visibility ? <Navbar data-aos="fade-up" /> : null}
+        {visibility ? <Navbar data-aos="fade-up"/> : null}
       </main>        
     </Router>
   );

@@ -10,7 +10,6 @@ import "aos/dist/aos.css"
 const About = () => {
     
     const [actualText, setActualText] = useState(true)
-    const showMore = "...Show more"
 
     const data = {
         responsive: "My sites are completely responsive, I've got nice experience designing full responsive websites which can sometimes be a bit difficult to adapt to a mobile device.",
@@ -37,7 +36,7 @@ const About = () => {
                     <h3>FAST LEARNER</h3>
                     <div className="explanation">
                     {actualText ? data.LEARNER.substring(0,150) : data.LEARNER}
-                    {actualText == true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
+                    {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
                 <div className="info-container" data-aos="fade-up-right">
@@ -45,7 +44,7 @@ const About = () => {
                     <h3>API USE</h3>
                     <div className="explanation">
                     {actualText ? data.API.substring(0,150) : data.API}
-                    {actualText == true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
+                    {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
                 <div className="info-container" data-aos="fade-up-left">
@@ -53,7 +52,7 @@ const About = () => {
                     <h3>DYNAMIC</h3>
                     <div className="explanation">
                     {actualText ? data.DYNAMIC.substring(0,150) : data.DYNAMIC}
-                    {actualText == true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
+                    {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
                 <div className="info-container" data-aos="fade-up-left">
@@ -61,7 +60,7 @@ const About = () => {
                     <h3>RESPONSIVE</h3>
                     <div className="explanation">
                     {actualText ? data.responsive.substring(0,150) : data.responsive}
-                    {actualText == true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
+                    {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
             </div>

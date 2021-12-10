@@ -141,6 +141,7 @@ p:first-of-type {
     flex-direction: row;
     border: 3px solid #303030;
     gap: 20px;
+    background: #fff;
 }
 
 .navbar a {
@@ -203,7 +204,39 @@ p:first-of-type {
   gap: 20px;
 }
 
+.info-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  text-align: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 5px;
+  .icon-cont {
+    margin-bottom: 20px;
+  }
+  h3 {
+    width: fit-content;
+    margin: 20px auto;
+    border-bottom: 2px solid $secondary-b;
+  }
+  a {
+    font-style: italic;
+    cursor: pointer;
+  }
+}
 
+.icon-cont {
+  background: rgb(255, 255, 255);
+  width: 120px;
+  border-radius: 10px;
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+  }
+}
 /* ANIMATIONS */
 
 a {
@@ -320,6 +353,6 @@ p {
     }
   }
   .main-ABOUT-container {
-    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    grid-template: repeat(4, 1fr)/ repeat(4, 1fr);
   }
 }

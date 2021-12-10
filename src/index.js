@@ -5,6 +5,7 @@ import ParticleComponent from "./ParticleComponent";
 import { Presentation } from "./components/Presentation";
 import { Bio } from "./components/Bio";
 import { Navbar } from "./components/Nav";
+import About from "./components/About";
 import { useState, useMemo, useEffect, useRef } from "react";
 import '../src/style.css';
 import Aos from "aos"
@@ -65,6 +66,7 @@ function App() {
       <main ref={targetRef}>
         <Bio />
         {visibility ? <Navbar data-aos="fade-up"/> : null}
+        <About data-aos="fade-up" />
       </main>        
     </Router>
   );

@@ -1,5 +1,6 @@
 $black-title: #303030;
 $secondary-b: #B2B0B0;
+$third-c: #f2f1f1;
 
 * {
   box-sizing: border-box;
@@ -39,15 +40,23 @@ body {
 
 .absolute-pos-arrow {
   position: absolute;
-  width: 70px;
+  width: 200px;
   padding: 10px;
-  border-radius: 7px;
   text-align: center;
-  left: calc(50% - 35px);
+  left: calc(50% - 100px);
   bottom: calc(50% - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: $black-title;
+  gap: 17px;
+  color: #fff;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+  border: 2px solid #fff;
+
+  a {
+    color: #fff;
+  }
 
   a img {
     width: 30px;
@@ -58,6 +67,19 @@ body {
   }
 }
 
+.absolute-pos-arrow:hover {
+  background: #04c2c9;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+.absolute-pos-arrow span {
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+.absolute-pos-arrow:hover span {
+  transform: rotate(90deg);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
 
 .absolute-pos-arrow a img:hover {
   width: 40px;
@@ -76,7 +98,6 @@ canvas {
 #biography {
   padding: 3% 10%;
   font-family: 'PT Sans', sans-serif;
-  margin-bottom: 200px;
 
   .description {
     letter-spacing: 2.5px;
@@ -101,7 +122,7 @@ p:first-of-type {
   height: auto;
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 0px 0px 0px 0px;
 }
 
 .navbar {
@@ -153,6 +174,10 @@ p:first-of-type {
   }
 }
 
+.title-container{
+  padding-top: 10px;
+}
+
 
 .contains-data b {
   font-size: 4rem;
@@ -161,11 +186,31 @@ p:first-of-type {
   place-content: center;
 }
 
-.data-eff-entering {
-  
+.about {
+  background: $third-c;
 }
 
+
+
+.main-ABOUT-container {
+  padding: 3% 10%;
+  display: grid;
+  width: 100%;
+  grid-template: repeat(1, 1fr)/ repeat(1, 1fr);
+  font-family: "PT Sans";
+  place-items: center;
+  padding: 0% 10% 5%;
+  gap: 20px;
+}
+
+
 /* ANIMATIONS */
+
+a {
+  text-decoration: none;
+  color: $black-title;
+  font-family: "PT Sans", cursive;
+}
 
 b,
 h2,
@@ -173,6 +218,7 @@ h3,
 p {
   color: $black-title;
   font-size: clamp(1.5rem, 4vw, 1.8rem);
+  font-family: "PT Sans", cursive;
 
 }
 
@@ -255,6 +301,8 @@ p {
 
   .nav-container {
     justify-content: end;
+    padding: 0px 20px;
+
     .navbar {
       overflow: hidden;
       position: fixed;
@@ -270,5 +318,8 @@ p {
       height: 200px;
       border: 3px solid $black-title;
     }
+  }
+  .main-ABOUT-container {
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
   }
 }

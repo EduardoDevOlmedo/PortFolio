@@ -1,7 +1,9 @@
 import React from "react"
-import play from '../icons/play.png'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faArrowRight} from "@fortawesome/free-solid-svg-icons"
 
-function Presentation(props){
+
+function Presentation(){
   return(
   <section>
     <div className="absolute-pos">
@@ -9,7 +11,8 @@ function Presentation(props){
       <p>Frontend Developer</p>
     </div>
     <div className="absolute-pos-arrow">
-      <a href="#biography" title="View Projects"><img alt="play-icon" src={play}></img></a>
+      <a href="#biography" title="View Projects">View my work</a>
+      <span><FontAwesomeIcon style={{verticalAlign: "middle"}} icon={faArrowRight}></FontAwesomeIcon></span>
     </div>
   </section>
   )

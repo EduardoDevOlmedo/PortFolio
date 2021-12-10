@@ -32,32 +32,40 @@ const About = () => {
             <Title title="About"/>
             <div className="main-ABOUT-container">
                 <div className="info-container" data-Aos="fade-up-right">
-                    <div className="icon-cont"><img src={fast}></img></div>
-                    <h3>FAST LEARNER</h3>
+                   <div className="data-contains">
+                      <div className="icon-cont"><img src={fast}></img></div>
+                      <h3>FAST LEARNER</h3>
+                   </div>
                     <div className="explanation">
                     {actualText ? data.LEARNER.substring(0,150) : data.LEARNER}
                     {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
                 <div className="info-container" data-aos="fade-up-right">
-                    <div className="icon-cont"><img src={api}></img></div>
-                    <h3>API USE</h3>
+                <div className="data-contains">
+                      <div className="icon-cont"><img src={api}></img></div>
+                      <h3>API USE</h3>
+                 </div>
                     <div className="explanation">
                     {actualText ? data.API.substring(0,150) : data.API}
                     {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
                 <div className="info-container" data-aos="fade-up-left">
-                    <div className="icon-cont"><img src={DYNAMIC}></img></div>
-                    <h3>DYNAMIC</h3>
+                <div className="data-contains">
+                      <div className="icon-cont"><img src={DYNAMIC}></img></div>
+                      <h3>DYNAMIC</h3>
+                </div>
                     <div className="explanation">
                     {actualText ? data.DYNAMIC.substring(0,150) : data.DYNAMIC}
                     {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}
                     </div>
                 </div>
                 <div className="info-container" data-aos="fade-up-left">
-                    <div className="icon-cont"><img src={LEARNER}></img></div>
-                    <h3>RESPONSIVE</h3>
+                   <div className="data-contains">
+                      <div className="icon-cont"><img src={LEARNER}></img></div>
+                      <h3>RESPONSIVE</h3>
+                   </div>
                     <div className="explanation">
                     {actualText ? data.responsive.substring(0,150) : data.responsive}
                     {actualText === true ? <a onClick={handleClick}>...Show More</a> : <a onClick={handleClick}>...Show less</a>}

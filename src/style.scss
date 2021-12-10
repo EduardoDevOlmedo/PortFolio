@@ -123,6 +123,8 @@ p:first-of-type {
   display: flex;
   justify-content: center;
   padding: 0px 0px 0px 0px;
+  z-index: 2;
+  position: absolute;
 }
 
 .navbar {
@@ -207,10 +209,9 @@ p:first-of-type {
 .info-container {
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 300px;
   text-align: center;
   align-items: center;
-  height: auto;
   margin-bottom: 5px;
   .icon-cont {
     margin-bottom: 20px;
@@ -236,6 +237,14 @@ p:first-of-type {
     object-fit: contain;
 
   }
+}
+
+
+.data-contains {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* ANIMATIONS */
 

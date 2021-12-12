@@ -256,7 +256,6 @@ p:first-of-type {
   width: -moz-fit-content;
   width: fit-content;
   margin: 20px auto;
-  border-bottom: 2px solid #B2B0B0;
 }
 
 .info-container a {
@@ -266,8 +265,9 @@ p:first-of-type {
 }
 
 .icon-cont {
-  background: white;
-  width: 120px;
+  background-image: url("./icons/decagono.svg");
+  background-repeat: no-repeat;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -296,6 +296,64 @@ p:first-of-type {
 
 .explanation div {
   font-size: 1.2rem;
+}
+
+.box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-container .project-tecnologies {
+  padding: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-container .project-tecnologies div:last-of-type {
+  font-family: "PT Sans", cursive;
+}
+
+.box-container .box {
+  width: 300px;
+  margin-top: 30px;
+}
+
+.box-container .project-description h5 {
+  font-family: "PT Sans", cursive;
+}
+
+.box-container p {
+  font-size: 1.3rem;
+  text-align: justify;
+  padding: 7px;
+}
+
+#projects {
+  padding: 3% 10%;
+}
+
+.projects-title-cont {
+  text-align: center;
 }
 
 /* ANIMATIONS */
@@ -423,9 +481,29 @@ p {
   }
 }
 
+@media screen and (min-width: 900px) {
+  .box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .explanation div {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
+}
+
+.body-wrapper {
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */

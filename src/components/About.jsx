@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState} from "react";
 import Title from "./Title";
 import fast from "../icons/fast.svg"
 import api from "../icons/APIs.svg"
@@ -28,7 +28,7 @@ const About = () => {
         return (
             <div>
                 {resultString}
-                <a onClick={handleClick}>{actualText ? "...Read More" : "Read Less"}</a>
+                <div onClick={handleClick}>{actualText ? "...Read More" : "Read Less"}</div>
             </div>
         )
     }
@@ -50,7 +50,7 @@ const About = () => {
             <div className="main-ABOUT-container">
                 <div className="info-container" data-Aos="fade-up-right">
                    <div className="data-contains">
-                      <div className="icon-cont"><img src={LEARNER}></img></div>
+                      <div className="icon-cont"><img alt="responsive-design" src={LEARNER}></img></div>
                       <h3>RESPONSIVE</h3>
                    </div>
                     <div className="explanation">
@@ -61,7 +61,7 @@ const About = () => {
                 </div>
                 <div className="info-container" data-aos="fade-up-right">
                 <div className="data-contains">
-                      <div className="icon-cont"><img src={api}></img></div>
+                      <div className="icon-cont"><img alt="api use" src={api}></img></div>
                       <h3>API USE</h3>
                  </div>
                     <div className="explanation">
@@ -72,7 +72,7 @@ const About = () => {
                 </div>
                 <div className="info-container" data-aos="fade-up-left">
                 <div className="data-contains">
-                      <div className="icon-cont"><img src={DYNAMIC}></img></div>
+                      <div className="icon-cont"><img alt="dynamic" src={DYNAMIC}></img></div>
                       <h3>DYNAMIC</h3>
                 </div>
                     <div className="explanation">
@@ -83,7 +83,7 @@ const About = () => {
                 </div>
                 <div className="info-container" data-aos="fade-up-left">
                    <div className="data-contains">
-                      <div className="icon-cont"><img src={fast}></img></div>
+                      <div className="icon-cont"><img alt="learner" src={fast}></img></div>
                       <h3>LEARNER</h3>
                    </div>
                     <div className="explanation">

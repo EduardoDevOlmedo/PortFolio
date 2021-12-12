@@ -11,7 +11,7 @@ function Presentation(){
       <p>Frontend Developer</p>
     </div>
     <a href="#biography" className="absolute-pos-arrow">
-      <a  title="View Projects">View my work</a>
+      <div title="View Projects" href="null">View my work</div>
       <span><FontAwesomeIcon style={{verticalAlign: "middle"}} icon={faArrowRight}></FontAwesomeIcon></span>
     </a>
   </section>

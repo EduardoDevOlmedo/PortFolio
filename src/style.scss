@@ -228,8 +228,9 @@ p:first-of-type {
 }
 
 .icon-cont {
-  background: rgb(255, 255, 255);
-  width: 120px;
+  background-image: url('./icons/decagono.svg');
+  background-repeat: no-repeat;
+  padding: 20px;
   border-radius: 10px;
   img {
     width: 100px;
@@ -249,6 +250,45 @@ p:first-of-type {
 
 .explanation div {
   font-size: 1.2rem;
+}
+
+
+.box-container {
+  .project-tecnologies {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    div:last-of-type{
+      font-family: "PT Sans", cursive;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .box {
+    width: 300px;
+    margin-top: 30px;
+  }
+  .project-description h5 {
+    font-family: "PT Sans", cursive;
+  }
+}
+
+.box-container p{
+  font-size: 1.3rem;
+  text-align: justify;
+  padding: 7px;
+}
+
+#projects {
+  padding: 3% 10%;
+}
+
+.projects-title-cont {
+  text-align: center;
 }
 
 /* ANIMATIONS */
@@ -375,8 +415,24 @@ p {
   }
 }
 
+@media screen and(min-width:900px){
+  .box-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .explanation div {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
+}
+
+
+//
+
+.body-wrapper {
+  overflow-x:hidden;
 }

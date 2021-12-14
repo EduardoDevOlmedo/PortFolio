@@ -9,7 +9,7 @@ $third-c: #f2f1f1;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 76.5%;
   scroll-behavior: smooth;
 }
 
@@ -249,49 +249,132 @@ p:first-of-type {
 }
 
 .explanation div {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+
+  .box {
+    width: 290px;
+    margin: 20px;
+    height: 400px;
+  }
+
+
+.box  a {
+  color: #fff;
+}
+
+.project-description a:hover {
+  transform-origin: left;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  color: #fff;
+  background-color: $black-title;
+  border: 1px solid #fff;
 }
 
 
 .box-container {
-  .project-tecnologies {
-    padding: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    div:last-of-type{
-      font-family: "PT Sans", cursive;
-    }
-  }
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  .box {
-    width: 300px;
-    margin-top: 30px;
-  }
-  .project-description h5 {
-    font-family: "PT Sans", cursive;
-  }
+  justify-content: center;
 }
 
 .box-container p{
-  font-size: 1.3rem;
+  font-size: 16px;
   text-align: justify;
-  padding: 7px;
 }
 
 #projects {
-  padding: 3% 10%;
+  padding: 3% 7%;
 }
 
 .projects-title-cont {
   text-align: center;
 }
 
+.box img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.icon {
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.project-desc {
+  padding: 19px 20px;
+  background: $black-title;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  h5, p {
+    color: #fff;
+    
+  }
+}
+
+.project-tecs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    background-color: $secondary-b;
+    color: $black-title;
+    border-radius: 20px;
+    padding: 4px;
+    font-size: 16px;    
+    width: clamp(40px, 50%, 120px);
+    text-align: center;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  }
+}
+
+.project-tecs a:hover {
+  border: 1px solid $secondary-b;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  background: $black-title;
+  font-weight: bolder;
+  color: $secondary-b;
+}
+
+.react {
+  background-image: url("./icons/tecSVGs/REACT.svg");
+}
+
+.html {
+  background-image: url("./icons/tecSVGs/HTML.svg");
+}
+
+.css {
+  background-image: url("./icons/tecSVGs/CSS.svg");
+}
+
+.sass {
+  background-image: url("./icons/tecSVGs/SASS.svg");
+}
+
+.js {
+  background-image: url("./icons/tecSVGs/JS.svg");
+}
+
+.postman {
+  background-image: url("./icons/tecSVGs/POSTMAN.svg");
+}
+
 /* ANIMATIONS */
+
 
 a {
   text-decoration: none;
@@ -302,13 +385,15 @@ a {
 b,
 h2,
 h3,
+h5,
 p {
   color: $black-title;
-  font-size: clamp(1.5rem, 4vw, 1.8rem);
   font-family: "PT Sans", cursive;
 
 }
 
+
+//animations
 
 
 
@@ -373,7 +458,15 @@ p {
 }
 
 
+
 /* media Queries */
+
+
+@media screen and (min-width: 360px) {
+  .box{
+    width: 340px;
+  }
+}
 
 @media screen and (min-width: 601px) {
   html {
@@ -415,18 +508,14 @@ p {
   }
 }
 
-@media screen and(min-width:900px){
-  .box-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    flex-direction: row;
-  }
-}
+
 
 @media screen and (min-width: 1000px) {
   .explanation div {
     font-size: 1.35rem;
+  }
+  .box-container {
+    flex-direction: row;
   }
 }
 

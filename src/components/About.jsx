@@ -20,7 +20,7 @@ const About = () => {
     function ReadMore({children}){
         
         const text = children;
-        const [actualText, setActualText] = useState(false)
+        const [actualText, setActualText] = useState(true)
         const resultString = actualText ? text.slice(0, 100) : text        
         function handleClick(){
             setActualText(!actualText)

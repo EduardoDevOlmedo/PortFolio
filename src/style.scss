@@ -259,6 +259,12 @@ p:first-of-type {
     height: 400px;
   }
 
+  .box-two {
+    width: 290px;
+    margin: 20px auto;
+    height: 400px;
+  }
+
 
 .box  a {
   color: #fff;
@@ -286,6 +292,7 @@ p:first-of-type {
 }
 
 #projects {
+  position: relative;
   padding: 3% 7%;
 }
 
@@ -347,6 +354,76 @@ p:first-of-type {
   background: $black-title;
   font-weight: bolder;
   color: $secondary-b;
+}
+
+
+.modal-cont {
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+ 
+  h5, p {
+    color: #fff;
+    text-align: justify;
+    padding: 0px 10px;
+    font-size: 1.4rem;
+  }
+  img {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius:30px;
+    position: relative;
+    height: 220px;
+  }
+  .project-descr {
+    padding: 14px;
+  }
+  .modal-tecs {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    flex-direction: row-reverse;
+    a {
+      background-color: $secondary-b;
+      color: $black-title;
+      border-radius: 20px;
+      padding: 4px;
+      font-size: 16px;    
+      width: clamp(40px, 50%, 120px);
+      text-align: center;
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+    }
+  }
+  
+}
+
+.modal-cont a:hover {
+  border: 1px solid $secondary-b;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  background: $black-title;
+  font-weight: bolder;
+  color: $secondary-b;
+}
+
+.close-modal {
+    position: absolute;
+    right: -10px;
+    padding: 10px;
+    top: -21px;
+    background: beige;
+    border-radius: 190%;
+    font-family: 'PT Sans';
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    border: 2px solid #4b4b4b;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    }
 }
 
 .react {
@@ -457,7 +534,10 @@ p {
   }
 }
 
-
+h2 {
+  font-size: 1.9rem;
+  font-weight: 100;
+}
 
 /* media Queries */
 

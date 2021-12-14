@@ -32,13 +32,7 @@ const About = () => {
             </div>
         )
     }
-    
 
-
-   
-    
-
-    
 
     useEffect(() => {
         Aos.init({duration: 250})

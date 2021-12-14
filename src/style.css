@@ -304,6 +304,12 @@ p:first-of-type {
   height: 400px;
 }
 
+.box-two {
+  width: 290px;
+  margin: 20px auto;
+  height: 400px;
+}
+
 .box a {
   color: #fff;
 }
@@ -340,6 +346,7 @@ p:first-of-type {
 }
 
 #projects {
+  position: relative;
   padding: 3% 7%;
 }
 
@@ -409,6 +416,91 @@ p:first-of-type {
   background: #303030;
   font-weight: bolder;
   color: #B2B0B0;
+}
+
+.modal-cont {
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.modal-cont h5, .modal-cont p {
+  color: #fff;
+  text-align: justify;
+  padding: 0px 10px;
+  font-size: 1.4rem;
+}
+
+.modal-cont img {
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  height: 220px;
+}
+
+.modal-cont .project-descr {
+  padding: 14px;
+}
+
+.modal-cont .modal-tecs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.modal-cont .modal-tecs a {
+  background-color: #B2B0B0;
+  color: #303030;
+  border-radius: 20px;
+  padding: 4px;
+  font-size: 16px;
+  width: clamp(40px, 50%, 120px);
+  text-align: center;
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+}
+
+.modal-cont a:hover {
+  border: 1px solid #B2B0B0;
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
+  background: #303030;
+  font-weight: bolder;
+  color: #B2B0B0;
+}
+
+.close-modal {
+  position: absolute;
+  right: -10px;
+  padding: 10px;
+  top: -21px;
+  background: beige;
+  border-radius: 190%;
+  font-family: 'PT Sans';
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+  border: 2px solid #4b4b4b;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
 }
 
 .react {
@@ -504,6 +596,11 @@ p {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 100;
 }
 
 /* media Queries */

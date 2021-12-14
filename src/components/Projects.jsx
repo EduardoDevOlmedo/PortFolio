@@ -1,23 +1,116 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Title from "./Title";
+import { ClickAwayListener, Modal } from "@material-ui/core";
+import {makeStyles} from "@material-ui/core"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
+const useStyles = makeStyles((theme)=>({
+    modal:{
+        position: "absolute",
+        background: "#303030",
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        zIndex: 1,
+        borderRadius: 30,
+        width: 500,
+        maxWidth: "90%",
+        transition: "ease-in"
+    }
+}))
 
 function Projects(){
+    
+    const styles = useStyles()
+    const [isClicked, setIsClicked] = useState(false)
+    const [isClickedOne, setIsClickedOne] = useState(false)
+    const [isClickedTwo, setIsClickedTwo] = useState(false)
+
+    const titles = ['Weather Project', 'Quotes Project', 'E-Commerce']
+    const infor = ['This was a really nice project, using Weather API, POSTMAN, and some react hooks.', 
+    'I really liked making the design of this project, using react and SASS. I also used Postman.', 
+    'This was the first project that I made. Since I was starting, I just used the basics. I used pure JS for this.'
+    ]
+    const imgURL = ['https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg', 'https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg',"https://destinonegocio.com/wp-content/uploads/2016/05/e.commerce1-1030x578.jpg" ]
+    const projectURLS = [ 
+        "https://peaceful-bell-f4706e.netlify.app/",
+        "https://nifty-sammet-03df98.netlify.app/",
+        "https://eduardodevolmedo.github.io/Your-Destiny/venta.html"
+    ]
+
+
+    function Modal(props){
+        return(
+          <div className="modal-cont">
+              <div className={styles.modal}>
+                  <img src={props.img}></img>
+                  <span className="close-modal" onClick={props.function}>X</span>
+                  <div className="project-descr">
+                  <h5>{props.title}</h5>
+                  <p>{props.text}</p>
+                  <div className="modal-tecs">
+                    <div >
+                        <a target="_blank" href={props.link}>GoTo Project</a>
+                    </div>
+                    <div className="icons">
+                    <span className={`icon ${props.icons[0]}`}></span>
+                    <span className={`icon ${props.icons[1]}`}></span>
+                    <span className={`icon ${props.icons[2]}`}></span>
+                    <span className={`icon ${props.icons[3]}`}></span>
+                    <span className={`icon ${props.icons[4]}`}></span>
+
+                    </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+       )
+    }
+
+
+    function handleClick(){
+        setIsClicked(!isClicked)
+    }
+
+    function handleClickOne(){
+        setIsClickedOne(!isClickedOne)
+    }
+
+    function handleClickTwo(){
+        setIsClickedTwo(!isClickedTwo)
+    }
+
+    useEffect(() => {
+        Aos.init({duration: 400})
+    }, [])
+    
+    
     return(
-        <section id="projects">
+        <section id="projects" style={{padding: isClicked || isClickedOne || isClickedTwo  ? "0px" : "3% 7%"}}>
+        {isClicked ? <Modal title={titles[0]} img={imgURL[0]}  text={infor[0]} icons={["sass", "react", "postman", "js", "css"]} link={projectURLS[0]} function={handleClick}/> : null}
+        {isClickedOne ? <Modal  title={titles[1]} img={imgURL[1]}  text={infor[1]} icons={["sass", "react", "postman", "js", "html"]} link={projectURLS[1]}
+        function={handleClickOne}
+         /> : null}
+        {isClickedTwo ? <Modal  title={titles[2]} img={imgURL[2]}  text={infor[2]} icons={["sass", "html", "js", "css"]} link={projectURLS[2]}
+            function={handleClickTwo}
+        /> : null}
             <Title title="Projects"></Title>
             <div className="projects-title-cont">
             <h2>These are some projects I've worked on, all of them
-                are completely done by myself, including desing and usage.
+                are completely done by myself, including design and usage.
             </h2>
             </div>
-            <div className="box-container">
-            <div className="box">
-                <img src="https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg"></img>
+            <div className="box-container" style={{filter: isClicked || isClickedOne || isClickedTwo ? "blur(8px)" : "initial"}}>
+            <div className="box" data-aos="fade-up">
+                <img src={imgURL[0]}></img>
                 <div className="project-desc">
-                    <h5>Weather Project</h5>
-                    <p>This was a really nice project, using Weather API, POSTMAN, and some react hooks.</p>
-                    <div className="project-tecs">
-                    <a target="_blank" href="https://peaceful-bell-f4706e.netlify.app/">Go To Project</a>
+                    <h5>{titles[0]}</h5>
+                    <p>{infor[0]}</p>
+                <div className="project-tecs">
+                    <a target="_blank" onClick={handleClick}>See More</a>
                     <span className="icon react"></span>
                     <span className="icon sass"></span>
                     <span className="icon js"></span>
@@ -25,13 +118,13 @@ function Projects(){
                 </div>
                 </div>
             </div>
-            <div className="box">
-                <img src="https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg"></img>
+            <div className="box" data-aos="fade-up">
+                <img src={imgURL[1]}></img>
                 <div className="project-desc">
-                <h5>Quotes Project</h5>
-                    <p>I really liked making the design of this project, using react and SASS. I also used Postman.</p>
+                <h5>{titles[1]}</h5>
+                    <p>{infor[1]}</p>
                     <div className="project-tecs">
-                    <a target="_blank" href="https://nifty-sammet-03df98.netlify.app/">Go To Project</a>
+                    <a onClick={handleClickOne}>See More</a>
                     <span className="icon react"></span>
                     <span className="icon sass"></span>
                     <span className="icon js"></span>
@@ -39,24 +132,25 @@ function Projects(){
                 </div>
                 </div>
             </div>
-            <div className="box">
-                <img src="https://destinonegocio.com/wp-content/uploads/2016/05/e.commerce1-1030x578.jpg"></img>
+            <div className="box" data-aos="fade-up">
+                <img src={imgURL[2]}></img>
                 <div className="project-desc">
-                    <h5>Eccomerce</h5>
-                    <p>This was the first project that I made. Since I was starting, I just used the basics. I used pure JS for this.</p>
+                    <h5>{titles[2]}</h5>
+                    <p>{infor[2]}</p>
                     <div className="project-tecs">
-                    <a target="_blank" href="https://eduardodevolmedo.github.io/Your-Destiny/venta.html">Go to Project</a>
+                    <a onClick={handleClickTwo} target="_blank">See More</a>
                     <span className="icon sass"></span>
                     <span className="icon css"></span>
                     <span className="icon js"></span>
                     <span className="icon html"></span>
                 </div>
-                </div>
+                </div>                
             </div>
             </div>
         </section>
     )
 }
+
 
 
 

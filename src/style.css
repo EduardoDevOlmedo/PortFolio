@@ -192,6 +192,7 @@ p:first-of-type {
   width: clamp(200px, 50%, 320px);
   text-align: center;
   margin: 20px auto;
+  margin-top: -30px;
   letter-spacing: 2.8px;
   border-bottom: 2px solid #B2B0B0;
 }
@@ -371,6 +372,7 @@ p:first-of-type {
   background-size: cover;
   background-position: center;
   display: inline-block;
+  margin: 2px;
   vertical-align: middle;
 }
 

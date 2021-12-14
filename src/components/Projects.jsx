@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme)=>({
     modal:{
         position: "absolute",
         background: "#303030",
-        border: '2px solid #000',
         boxShadow: theme.shadows[5],
         top: "50%",
         left: "50%",
@@ -30,9 +29,9 @@ function Projects(){
     const [isClickedTwo, setIsClickedTwo] = useState(false)
 
     const titles = ['Weather Project', 'Quotes Project', 'E-Commerce']
-    const infor = ['This was a really nice project, using Weather API, POSTMAN, and some react hooks.', 
-    'I really liked making the design of this project, using react and SASS. I also used Postman.', 
-    'This was the first project that I made. Since I was starting, I just used the basics. I used pure JS for this.'
+    const infor = ['This was a really nice project, using Weather API, POSTMAN, and some react hooks. I think the most difficult part of this one, was including a nice UX/UI experience, something than can be sometimes problematic', 
+    'I really liked making the design of this project, using react and SASS. I also used Postman. I think fetching is super important for every single react, and frontend developer', 
+    'This was the first project that I made. Since I was starting, I just used the basics. I used pure JS for this. Even though I was super newbie, I managed to do a great job.'
     ]
     const imgURL = ['https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg', 'https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg',"https://destinonegocio.com/wp-content/uploads/2016/05/e.commerce1-1030x578.jpg" ]
     const projectURLS = [ 
@@ -108,7 +107,7 @@ function Projects(){
                 <img src={imgURL[0]}></img>
                 <div className="project-desc">
                     <h5>{titles[0]}</h5>
-                    <p>{infor[0]}</p>
+                    <p>{infor[0].substring(0,100)}...</p>
                 <div className="project-tecs">
                     <a target="_blank" onClick={handleClick}>See More</a>
                     <span className="icon react"></span>
@@ -122,7 +121,7 @@ function Projects(){
                 <img src={imgURL[1]}></img>
                 <div className="project-desc">
                 <h5>{titles[1]}</h5>
-                    <p>{infor[1]}</p>
+                    <p>{infor[1].substring(0,100)}...</p>
                     <div className="project-tecs">
                     <a onClick={handleClickOne}>See More</a>
                     <span className="icon react"></span>
@@ -136,7 +135,7 @@ function Projects(){
                 <img src={imgURL[2]}></img>
                 <div className="project-desc">
                     <h5>{titles[2]}</h5>
-                    <p>{infor[2]}</p>
+                    <p>{infor[2].substring(0,100)}...</p>
                     <div className="project-tecs">
                     <a onClick={handleClickTwo} target="_blank">See More</a>
                     <span className="icon sass"></span>

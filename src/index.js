@@ -11,6 +11,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import '../src/style.css';
 import Aos from "aos"
 import "aos/dist/aos.css"
+import Contacts from "./components/Contacts";
 
 function App() {
   
@@ -69,6 +70,7 @@ function App() {
         {visibility ? <Navbar data-aos="fade-up"/> : null}
         <About data-aos="fade-up"></About>
         <Projects></Projects>
+        <Contacts></Contacts>
       </main>        
     </Router>
   );

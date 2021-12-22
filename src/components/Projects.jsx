@@ -89,7 +89,8 @@ function Projects(){
     
     return(
         <section id="projects" style={{padding: isClicked || isClickedOne || isClickedTwo  ? "0px" : "3% 7%"}}>
-        {isClicked ? <Modal title={titles[0]} img={imgURL[0]}  text={infor[0]} icons={["sass", "react", "postman", "js", "css"]} link={projectURLS[0]} function={handleClick}/> : null}
+        {isClicked ? <Modal title={titles[0]} img={imgURL[0]}  text={infor[0]} icons={["sass", "react", "postman", "js", "css"]} link={projectURLS[0]} function={handleClick}
+        /> : null}
         {isClickedOne ? <Modal  title={titles[1]} img={imgURL[1]}  text={infor[1]} icons={["sass", "react", "postman", "js", "html"]} link={projectURLS[1]}
         function={handleClickOne}
          /> : null}

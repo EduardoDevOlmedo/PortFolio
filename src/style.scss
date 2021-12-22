@@ -1,6 +1,8 @@
 $black-title: #303030;
 $secondary-b: #B2B0B0;
 $third-c: #f2f1f1;
+$contact-bg: #631e1e;
+$subcontact-bg: #ad3435;
 
 * {
   box-sizing: border-box;
@@ -98,6 +100,7 @@ canvas {
 #biography {
   padding: 3% 10%;
   font-family: 'PT Sans', sans-serif;
+  margin-bottom: 30px;
 
   .description {
     letter-spacing: 2.5px;
@@ -174,7 +177,7 @@ p:first-of-type {
 
   h2 {
     padding: 5px;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -205,6 +208,7 @@ p:first-of-type {
   place-items: self-start;
   padding: 0% 10% 5%;
   gap: 20px;
+  margin-bottom: 10px;
 }
 
 .info-container {
@@ -356,6 +360,7 @@ p:first-of-type {
   background: $black-title;
   font-weight: bolder;
   color: $secondary-b;
+  cursor:help;
 }
 
 
@@ -450,6 +455,123 @@ p:first-of-type {
 
 .postman {
   background-image: url("./icons/tecSVGs/POSTMAN.svg");
+}
+
+#contact {
+  background-color: $contact-bg;
+  padding: 5% 3%;
+  height: 650px;
+   h2 {
+    color: #fff;
+   }
+   h3 {
+     color: $secondary-b;
+     text-align: center;
+     font-size: 1.6rem;
+   }
+   .title-container {
+     margin-bottom: 55px;
+   }
+}
+
+.contact-form {  
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 35px auto;
+  gap: 10px;
+  max-width: 90%;
+
+  input, textarea {
+    background-color: $subcontact-bg;
+    outline: none;
+    border: none;
+    padding: 7px;
+    font-family: "PT Sans";
+    color: $secondary-b;
+    font-size: 1.3rem;
+  }
+
+  input {
+    height: 40px;
+  }
+  textarea {
+    height: 120px;
+  }
+
+  button {
+    width: 140px;
+    padding: 3px;
+    text-align: center;
+    margin: 0 auto;
+    background: $contact-bg;
+    color: $subcontact-bg;
+    border: none;
+    outline: none;
+    border: 3px solid $subcontact-bg;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 20px;
+  }
+}
+
+button {
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $contact-bg;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken(#fff, 15%);
+    transition: all .3s;
+    z-index: -1;
+  }
+  &:hover {
+    color: $contact-bg;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.contact-form {
+  textarea::placeholder, input::placeholder {
+    font-family: "PT Sans";
+    color: $secondary-b;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 30px;
+  gap: 15px;
+  a {
+    font-size: 3rem;
+    cursor: pointer;
+  }
 }
 
 /* ANIMATIONS */
@@ -601,6 +723,17 @@ h2 {
   }
 }
 
+@media screen and (min-width: 520px){
+  #contact h2 {
+    font-size: 3rem;
+  }
+  #contact h3 {
+    font-size: 2rem;
+  }
+  .title-container h2 {
+    font-size: 3rem;
+  }
+}
 
 //
 

@@ -28,7 +28,7 @@ const About = () => {
         return (
             <div>
                 {resultString}
-                <div onClick={handleClick}>{actualText ? "...Read More" : "Read Less"}</div>
+                <div style={{cursor: "pointer"}} onClick={handleClick}>{actualText ? "...Read More" : "Read Less"}</div>
             </div>
         )
     }

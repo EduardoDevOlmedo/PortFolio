@@ -31,7 +31,7 @@ function Bio() {
 
   return(
     <div data-aos="fade-up" id="biography" >
-        <Title title="Biography"/>
+        <Title title="About"/>
         <h3>Hi! I'm Eduardo Olmedo, a <b>Frontend Developer</b></h3>
         <p>I have worked with: </p>
         <div className="contains-data">

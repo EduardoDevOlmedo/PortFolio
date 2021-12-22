@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import Title from "./Title";
-import { ClickAwayListener, Modal } from "@material-ui/core";
 import {makeStyles} from "@material-ui/core"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -45,14 +44,14 @@ function Projects(){
         return(
           <div className="modal-cont">
               <div className={styles.modal}>
-                  <img src={props.img}></img>
+                  <img alt="project-desc" src={props.img}></img>
                   <span className="close-modal" onClick={props.function}>X</span>
                   <div className="project-descr">
                   <h5>{props.title}</h5>
                   <p>{props.text}</p>
                   <div className="modal-tecs">
                     <div >
-                        <a target="_blank" href={props.link}>GoTo Project</a>
+                        <a rel="noopener noreferrer" target="_blank" href={props.link}>GoTo Project</a>
                     </div>
                     <div className="icons">
                     <span className={`icon ${props.icons[0]}`}></span>
@@ -105,12 +104,12 @@ function Projects(){
             </div>
             <div className="box-container" style={{filter: isClicked || isClickedOne || isClickedTwo ? "blur(8px)" : "initial"}}>
             <div className="box" data-aos="fade-up">
-                <img src={imgURL[0]}></img>
+                <img alt="first-project" src={imgURL[0]}></img>
                 <div className="project-desc">
                     <h5>{titles[0]}</h5>
                     <p>{infor[0].substring(0,100)}...</p>
                 <div className="project-tecs">
-                    <a target="_blank" onClick={handleClick}>See More</a>
+                    <div target="_blank" onClick={handleClick}>See More</div>
                     <span className="icon react"></span>
                     <span className="icon sass"></span>
                     <span className="icon js"></span>
@@ -119,12 +118,12 @@ function Projects(){
                 </div>
             </div>
             <div className="box" data-aos="fade-up">
-                <img src={imgURL[1]}></img>
+                <img alt="second-project"  src={imgURL[1]}></img>
                 <div className="project-desc">
                 <h5>{titles[1]}</h5>
                     <p>{infor[1].substring(0,100)}...</p>
                     <div className="project-tecs">
-                    <a onClick={handleClickOne}>See More</a>
+                    <div onClick={handleClickOne}>See More</div>
                     <span className="icon react"></span>
                     <span className="icon sass"></span>
                     <span className="icon js"></span>
@@ -133,12 +132,12 @@ function Projects(){
                 </div>
             </div>
             <div className="box" data-aos="fade-up">
-                <img src={imgURL[2]}></img>
+                <img alt="third-project" src={imgURL[2]}></img>
                 <div className="project-desc">
                     <h5>{titles[2]}</h5>
                     <p>{infor[2].substring(0,100)}...</p>
                     <div className="project-tecs">
-                    <a onClick={handleClickTwo} target="_blank">See More</a>
+                    <div onClick={handleClickTwo} target="_blank">See More</div>
                     <span className="icon sass"></span>
                     <span className="icon css"></span>
                     <span className="icon js"></span>

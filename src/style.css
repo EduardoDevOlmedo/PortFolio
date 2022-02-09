@@ -440,6 +440,8 @@ p:first-of-type {
   border-top-right-radius: 30px;
   position: relative;
   height: 220px;
+  object-fit: contain;
+
 }
 
 .modal-cont .project-descr {

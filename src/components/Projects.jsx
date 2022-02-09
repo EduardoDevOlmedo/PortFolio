@@ -3,6 +3,7 @@ import Title from "./Title";
 import {makeStyles} from "@material-ui/core"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import imagenEccomerce from "../assets/imagenEccomerce.jpg" 
 
 const useStyles = makeStyles((theme)=>({
     modal:{
@@ -32,7 +33,7 @@ function Projects(){
     'I really liked making the design of this project, using react and SASS. I also used Postman. I think fetching is super important for every single react, and frontend developer', 
     'This was the first project that I made. Since I was starting, I just used the basics. I used pure JS for this. Even though I was super newbie, I managed to do a great job.'
     ]
-    const imgURL = ['https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg', 'https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg',"http://www.access2commerce.com/wp-content/uploads/2020/04/temp-estos-impuestos-debes-pagar-si-tienes-un-ecommerce-mini-783x412-1-300x158.jpg" ]
+    const imgURL = ['https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg', 'https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg', imagenEccomerce ]
     const projectURLS = [ 
         "https://peaceful-bell-f4706e.netlify.app/",
         "https://nifty-sammet-03df98.netlify.app/",

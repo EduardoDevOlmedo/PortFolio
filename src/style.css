@@ -440,9 +440,10 @@ p:first-of-type {
   border-top-right-radius: 30px;
   position: relative;
   height: 220px;
-  object-fit: contain;
-
+  object-fit: cover;
 }
+
+
 
 .modal-cont .project-descr {
   padding: 14px;
@@ -783,6 +784,9 @@ h2 {
   }
   .title-container {
     margin-top: -30px;
+  }
+  @modal-cont img {
+    object-fit: none;
   }
 }
 

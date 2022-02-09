@@ -2,7 +2,7 @@ import React   from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router} from "react-router-dom";
 import { Presentation } from "./components/Presentation";
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef} from "react";
 import { Bio } from "./components/Bio";
 import { Navbar } from "./components/Nav";
 import Projects from "./components/Projects";
@@ -12,9 +12,13 @@ import Contacts from "./components/Contacts";
 import Aos from "aos"
 import "aos/dist/aos.css"
 import '../src/style.css';
+import { set } from "express/lib/application";
 
 
 function App() {  
+
+  
+
 
   //INTERSECTION OBSERVER FOR NAV
 

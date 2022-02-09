@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useCallback} from "react";
 import Title from "./Title";
 import {makeStyles} from "@material-ui/core"
 import Aos from "aos"
@@ -27,6 +27,24 @@ function Projects(){
     const [isClicked, setIsClicked] = useState(false)
     const [isClickedOne, setIsClickedOne] = useState(false)
     const [isClickedTwo, setIsClickedTwo] = useState(false)
+    const [isEsc, setIsEsc] = useState(false)
+
+    const escFunction = useCallback((event) => {
+      if (event.keyCode === 27) {
+        setIsClicked(false)
+        setIsClickedOne(false)
+        setIsClickedTwo(false)
+      }
+    }, []);
+  
+    useEffect(() => {
+      document.addEventListener("keydown", escFunction);
+      
+      return () => {
+        document.removeEventListener("keydown", escFunction);
+        setIsEsc(false)
+      };
+    }, [escFunction]);
 
     const titles = ['Weather Project', 'Quotes Project', 'E-Commerce']
     const infor = ['This was a really nice project, using Weather API, POSTMAN, and some react hooks. I think the most difficult part of this one, was including a nice UX/UI experience, something than can be sometimes problematic', 

@@ -114,6 +114,7 @@ canvas {
 
 #biography .description {
   letter-spacing: 2.5px;
+  text-align: justify;
 }
 
 #biography h3,
@@ -221,9 +222,7 @@ p:first-of-type {
   display: -ms-grid;
   display: grid;
   width: 100%;
-  -ms-grid-rows: (1fr)[1];
-  -ms-grid-columns: (1fr)[1];
-      grid-template: repeat(1, 1fr)/repeat(1, 1fr);
+  grid-template: repeat(1, 1fr)/repeat(1, 1fr);
   font-family: "PT Sans";
   place-items: self-start;
   padding: 0% 10% 5%;
@@ -398,7 +397,7 @@ p:first-of-type {
           justify-content: space-between;
 }
 
-.project-tecs div {
+.project-tecs a {
   background-color: #B2B0B0;
   color: #303030;
   border-radius: 20px;
@@ -411,7 +410,7 @@ p:first-of-type {
   font-family: "PT Sans", cursive;
 }
 
-.project-tecs div:hover {
+.project-tecs a:hover {
   border: 1px solid #B2B0B0;
   -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 300ms;
@@ -683,6 +682,10 @@ button:hover:before {
   gap: 15px;
 }
 
+.data-eff {
+  transition: cubic-bezier(1, 0, 0, 1) 0.2s;
+}
+
 .socials a {
   font-size: 3rem;
   cursor: pointer;
@@ -827,9 +830,7 @@ h2 {
     height: fit-content;
   }
   .main-ABOUT-container {
-    -ms-grid-rows: (1fr)[1];
-    -ms-grid-columns: (1fr)[4];
-        grid-template: repeat(1, 1fr)/repeat(4, 1fr);
+    grid-template: repeat(1, 1fr)/repeat(4, 1fr);
     height: 470px;
   }
 }

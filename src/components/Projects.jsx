@@ -32,7 +32,7 @@ function Projects(){
     'I really liked making the design of this project, using react and SASS. I also used Postman. I think fetching is super important for every single react, and frontend developer', 
     'This was the first project that I made. Since I was starting, I just used the basics. I used pure JS for this. Even though I was super newbie, I managed to do a great job.'
     ]
-    const imgURL = ['https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg', 'https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg',"https://destinonegocio.com/wp-content/uploads/2016/05/e.commerce1-1030x578.jpg" ]
+    const imgURL = ['https://media.nationalgeographic.org/assets/photos/000/263/26383.jpg', 'https://cdn.lifehack.org/wp-content/uploads/2015/01/most-inspirational-quotes.jpeg',"http://www.access2commerce.com/wp-content/uploads/2020/04/temp-estos-impuestos-debes-pagar-si-tienes-un-ecommerce-mini-783x412-1-300x158.jpg" ]
     const projectURLS = [ 
         "https://peaceful-bell-f4706e.netlify.app/",
         "https://nifty-sammet-03df98.netlify.app/",
@@ -42,7 +42,7 @@ function Projects(){
 
     function Modal(props){
         return(
-          <div className="modal-cont">
+          <div className="modal-cont" id="main">
               <div className={styles.modal}>
                   <img alt="project-desc" src={props.img}></img>
                   <span className="close-modal" onClick={props.function}>X</span>
@@ -109,7 +109,7 @@ function Projects(){
                     <h5>{titles[0]}</h5>
                     <p>{infor[0].substring(0,100)}...</p>
                 <div className="project-tecs">
-                    <div target="_blank" onClick={handleClick}>See More</div>
+                    <a href="#main" onClick={handleClick}>See More</a>
                     <span className="icon react"></span>
                     <span className="icon sass"></span>
                     <span className="icon js"></span>
@@ -123,7 +123,7 @@ function Projects(){
                 <h5>{titles[1]}</h5>
                     <p>{infor[1].substring(0,100)}...</p>
                     <div className="project-tecs">
-                    <div onClick={handleClickOne}>See More</div>
+                    <a  href="#main" onClick={handleClickOne}>See More</a>
                     <span className="icon react"></span>
                     <span className="icon sass"></span>
                     <span className="icon js"></span>
@@ -137,7 +137,7 @@ function Projects(){
                     <h5>{titles[2]}</h5>
                     <p>{infor[2].substring(0,100)}...</p>
                     <div className="project-tecs">
-                    <div onClick={handleClickTwo} target="_blank">See More</div>
+                    <a href="#main" onClick={handleClickTwo} >See More</a>
                     <span className="icon sass"></span>
                     <span className="icon css"></span>
                     <span className="icon js"></span>

@@ -1,21 +1,22 @@
 import React   from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router} from "react-router-dom";
-import ParticleComponent from "./ParticleComponent";
 import { Presentation } from "./components/Presentation";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { Bio } from "./components/Bio";
 import { Navbar } from "./components/Nav";
 import Projects from "./components/Projects";
+import ParticleComponent from "./ParticleComponent";
 import About from "./components/About";
-import { useState, useMemo, useEffect, useRef } from "react";
-import '../src/style.css';
+import Contacts from "./components/Contacts";
 import Aos from "aos"
 import "aos/dist/aos.css"
-import Contacts from "./components/Contacts";
+import '../src/style.css';
 
-function App() {
-  
-//INTERSECTION OBSERVER FOR NAV
+
+function App() {  
+
+  //INTERSECTION OBSERVER FOR NAV
 
      const targetRef = useRef(null)
       const [visibility, setVisibility] = useState(false)

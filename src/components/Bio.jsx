@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "./Title";
-import { useState, useEffect} from "react";
+import { useState, useLayoutEffect, useEffect} from "react";
 import Aos from "aos"
 import "aos/dist/aos.css"
  
@@ -13,10 +13,10 @@ function Bio() {
 
     useEffect(() => {
         Aos.init({duration: 400})
-    }, [])
+    }, [abilities])
 
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const interval = setInterval(() => {
           if(count < abilities.length){
             setData(abilities[count++])
@@ -31,7 +31,7 @@ function Bio() {
 
   return(
     <div data-aos="fade-up" id="biography" >
-        <Title title="About"/>
+        <Title title="Bio"/>
         <h3>Hi! I'm Eduardo Olmedo, a <b>Frontend Developer</b></h3>
         <p>I have worked with: </p>
         <div className="contains-data">
